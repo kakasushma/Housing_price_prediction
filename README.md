@@ -36,7 +36,7 @@
 ### 1. Project Description
 #### A. Problem Statement
 
-Thousands of houses are sold everyday. There are some questions every buyer asks himself like: What is the actual price that this house deserves? Am I paying a fair price?
+Thousands of houses are sold everyday. There are some questions every buyer asks himself like: What is the actual rent that this house deserves? Am I paying a fair price?
 
 #### B. Best Possible Solutions
 a.Housing Expert<br>
@@ -104,23 +104,9 @@ a. Impute/Remove missing values or Null values (NaN)<br>
 b. Remove unnecessary and corrupted data.<br>
 c. Date/Text parsing if required.
 
-![](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Picture_For_README/2.png)<br>
-we handle NAN value using appropriate solutions.
-
-![](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Picture_For_README/3.png)<br>
-DOM Column have more than 50% value are missing it's better to delete that column
 
 
-![](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Picture_For_README/4.png)<br>
-some column have unique character. we solve these problem using split method and create seprate column for unique character.<br>
 
-We also have a categorical data we handle such kind of data using dummies variable concept. following are the columns which have categorical data.<br>
-a. renovationCondition<br>
-b. buildingStructure<br>
-c. buildingType<br>
-d. district<br>
-e. elevator<br>
-f. floor_type
 
 ![](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Picture_For_README/5.png)<br>
 Summary of the Heat-Map<br>
@@ -146,28 +132,17 @@ a. Most of the peoples average are lies in 12500-150000 ...
 #### B. Feature Engineering
 we found outlier in our data ..
 
-![](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Picture_For_README/10.png)<br>
+
 from the above figure we can notice that we have an outlier present in our dataset.<br>
 for outlier we can use IQR method and after using IQR method.Now, our data looks fine.
-![](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Picture_For_README/11.png)
+
 
 
 
 using the feature engineering we got out top 30 features with respect to totalPrice .
-![](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Picture_For_README/12.png)
 
-So,these are the top 20 features for our model<br>
-a. tradeTime<br>
-b. CommunityAverage<br>
-c. square<br>
-d. livingRoom<br>
-e. bathRoom<br>
-f. drawingRoom<br>
-g. renovationCondition<br>
-h. buildingStructure<br>
-i. elevator<br>
-j. constructionTime<br>
-k. Followers
+
+
 
 #### C. Data Normalization
 Normalization (min-max Normalization)<br>
@@ -184,11 +159,8 @@ c. Decesion Tree<br>
 d. Random Forest
 
 
-![](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Picture_For_README/14.png)<br>
-Using the linearRegression we got only 75 % accuracy.
 
-![](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Picture_For_README/15.png)<br>
-Using the Random Forest we got 98 % accuracy on train data and 89 % on test data .so,we can consider RandomForest as a  Best Algorithm for this problem.
+Using the linear regression we got 88 % accuracy on train data and 89 % on test data .so,we can consider RandomForest as a  Best Algorithm for this problem.
 
 
 ### 6. Model Creation
@@ -203,47 +175,9 @@ d. Sequential model based optimization<br>
 e. Optuna-Automate Hyperparameter Tuning<br>
 f. Genetic Algorithm<br>
 
-Main parameters used by RandomForest Algorithm are :-
-
-a. n_estimators --->    The number of trees in the forest.<br>
-b. criterion--->{"mse", "mae"}-->The function to measure the quality of a split<br>
-c. max_features--->{"auto", "sqrt", "log2"}-->    The number of features to consider when looking for the best split:
 
 
-So, After Hyperparameter Tuning we got 90 % accuracy on test data and 94 % accuracy on train data. 
-![](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Picture_For_README/16.png)<br>
-Now,Accuracy of model seems to be very good .so we can save the model using pickle. 
 
-
-### 7. Model Deployment
-After creating model ,we integrate that model with beautiful UI. for the UI part we used HTML,CSS,JS and Flask.
-![](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Picture_For_README/17.png)
-
-### 8. Model Conclusion
-
-Model predict 90% accurately on test data and 94% accurately on train data .
-
-
-### 9. Project Innovation
-a. Easy to use<br>
-b. open source<br>
-c. Best accuracy<br>
-d. GUI Based Application
-
-### 10. Limitation And Next Step
-Limitation are :-<br>
-a. Mobile Application<br>
-b. Accuracy can be improve<br>
-c. Model Size is heavy(~310 mb )<br>
-d. Feature is limited
-
-Next Step are :-<br>
-a. we will work on mobile application<br>
-b. we will reduce the size of model using PCA .
-
-
-### 11. Working Project Video
-![Working Projecct](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Picture_For_README/1_Video.gif)
 
 
 
